@@ -1,0 +1,9 @@
+# Linear Search Example
+nums = [5, 3, 9, 1, 4]
+target = 9
+found = False
+for num in nums:
+    if num == target:
+        found = True
+        break
+print("Number Found" if found else "Number Not Found")
