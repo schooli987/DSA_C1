@@ -1,9 +1,19 @@
 # Linear Search Example
-nums = [5, 3, 9, 1, 4]
-target = 9
+# Get list input from user
+user_input = input("Enter numbers separated by space: ")
+num_list = [int(x) for x in user_input.split()]
+
+# Get the target number to search
+target = int(input("Enter the target number to search: "))
+
+# Perform linear search
 found = False
-for num in nums:
-    if num == target:
+
+for i in range(len(num_list)):
+    if num_list[i] == target:
+        print(f"Target {target} found at index {i}.")
         found = True
         break
-print("Number Found" if found else "Number Not Found")
+
+if not found:
+    print(f"Target {target} not found in the list.")
