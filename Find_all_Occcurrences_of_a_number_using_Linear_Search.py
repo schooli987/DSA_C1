@@ -1,16 +1,19 @@
-# List with duplicate numbers
-numbers = [10, 20, 30, 20, 40, 50, 20]
-target = 20
+# Step 1: Get list input from user
+user_input = input("Enter numbers separated by space: ")
+num_list = [int(x) for x in user_input.split()]
 
-# Linear Search for all occurrences
-found_indices = []
+# Step 2: Get the target number to search
+target = int(input("Enter the target number to search: "))
 
-for i in range(len(numbers)):
-    if numbers[i] == target:
-        found_indices.append(i)
+# Step 3: Perform linear search to find all occurrences
+positions = []
 
-# Output result
-if found_indices:
-    print(f"{target} found at indices:", found_indices)
+for i in range(len(num_list)):
+    if num_list[i] == target:
+        positions.append(i)
+
+# Step 4: Display result
+if positions:
+    print(f"Target {target} found at positions (indexes): {positions}")
 else:
-    print(f"{target} not found")
+    print(f"Target {target} not found in the list.")
