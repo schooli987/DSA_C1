@@ -1,6 +1,14 @@
 # Step 1: Get list input from user
 user_input = input("Enter numbers separated by space: ")
-num_list = [int(x) for x in user_input.split()]
+
+# Initialize an empty list
+num_list = []
+
+# Split the input string and loop through each element
+for x in user_input.split():
+    num_list.append(int(x))
+
+print(num_list)
 
 # Step 2: Get the target number to search
 target = int(input("Enter the target number to search: "))
