@@ -1,6 +1,16 @@
-# Step 1: Get drawer items from user
+# Get drawer items input from user
 drawer_input = input("Enter items in the drawer separated by commas: ")
-drawer_items = [item.strip().lower() for item in drawer_input.split(",")]
+
+# Initialize an empty list
+drawer_items = []
+
+# Split input by commas and loop through each item
+for item in drawer_input.split(","):
+    cleaned_item = item.strip().lower()
+    drawer_items.append(cleaned_item)
+
+# Print the list
+print(drawer_items)
 
 # Step 2: Get the lost item to search
 lost_item = input("Enter the item you lost: ").strip().lower()
